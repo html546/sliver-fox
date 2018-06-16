@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <head>
+        <script src="../js/flexible_css.js"></script>
+        <script src="../js/flexible.js"></script>
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    </head>
+</head>
+
+<body>
+    <!-- 导航logo -->
+    <header>
+        <div class="logo"></div>
+        <div class="menu"></div>
+    </header>
+    <!-- 轮播 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide page1">
+                <div class="mashine"></div>
+                <div class="page1_content">
+                    <h4>高端激光加工设备的领跑者</h4>
+                    <p>采用进口激光器,光束质量好</p>
+                    <p>光斑小,单脉冲能量高</p>
+                    <a href="javascript:;">查看详情</a>
+                </div>
+            </div>
+            <div class="swiper-slide page1"></div>
+            <div class="swiper-slide page1"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="news">
+        <div class="news_title">
+            <div class="news_title_left"></div>
+            <a href="javascript:;">了解更多 →</a>
+        </div>
+        <div class="news_content">
+            <a href="javascript:;">
+                <div class="news_content1">
+                    <div class="date">05-10 2018</div>
+                    <img src="../images/car.png" alt="">
+                    <div class="news_content1_text">
+                        <h4>汽车行业好帮手 三维激光切割……</h4>
+                        <p>汽车工业是激光加工应用最多的领域之一,通</p>
+                        <img src="../images/arraw_right.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:;">
+                <div class="news_content1">
+                    <div class="date date2">05-15 2018</div>
+                    <img src="../images/film.png" alt="">
+                    <div class="news_content1_text">
+                        <h4>还在手工定制？戛纳都流行激光高级定制啦~</h4>
+                        <p> 这款由Iris Van Herpen量身打造的高定礼服</p>
+                        <img src="../images/arraw_right.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:;">
+                <div class="news_content1">
+                    <div class="date date2">05-10 2018</div>
+                    <img src="../images/beaming.png" alt="">
+                    <div class="news_content1_text">
+                        <h4>激光切割机 让金属家居充满想像</h4>
+                        <p>激光切割机应用给很多行业带来了变革</p>
+                        <img src="../images/arraw_right.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:;">
+                <div class="news_content1">
+                    <div class="date date2">05-10 2018</div>
+                    <img src="../images/aluminum.png" alt="">
+                    <div class="news_content1_text">
+                        <h4>全铝家具升温 金属激光切割机征服铝板</h4>
+                        <p>长久以来家具的主要原料是木材，这样</p>
+                        <img src="../images/arraw_right.png" alt="">
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+            }
+        })
+    </script>
+</body>
+
+</html>
