@@ -1,0 +1,48 @@
+.article {
+    padding: 0 .32rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.article .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article .title h4 {
+    font-size: .346667rem;
+    color: #333;
+    font-weight: bold;
+    margin-top: 1.066667rem;
+}
+
+.article .title p {
+    font-size: .293333rem;
+    color: #333;
+    line-height: .533333rem;
+}
+
+.article .content p {
+    font-size: .32rem;
+    color: #333;
+    margin: .6rem 0;
+}
+
+.article .content img {
+    width: 100%;
+    height: 5.6rem;
+}
+
+.article .link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: bold;
+    font-size: .32rem;
+    margin-bottom: .8rem;
+}
+
+.article .link a {
+    color: #333;
+}

@@ -1,0 +1,301 @@
+.banner {
+    width: 100%;
+    height: 9.6rem;
+    background: url(../images/banner.png) no-repeat center;
+    background-size: cover;
+    margin-top: 1.2rem;
+}
+
+.pag {
+    width: 100%;
+    height: 4.666667rem;
+    padding: 0 .32rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pag a {
+    display: block;
+    width: 2.666667rem;
+    height: 1.066667rem;
+    background: #ececec;
+    font-size: .346667rem;
+    color: #333;
+    text-align: center;
+    line-height: 1.066667rem;
+    margin-top: 1rem;
+}
+
+.pag a:last-child {
+    margin-top: 0;
+}
+
+.pag a.active {
+    color: #fff;
+    background: #0073bc;
+}
+
+.profile .banner1 {
+    width: 100%;
+    height: 4rem;
+    background: url(../images/banner2.png) no-repeat center;
+    background-size: cover;
+}
+
+.profile .profile_bg {
+    width: 100%;
+    height: 7.733333rem;
+    background: #f5f5f5;
+    padding: 0 .32rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.profile .profile_bg .title {
+    margin-top: 1rem;
+}
+
+.profile .profile_bg .title h3 {
+    font-weight: bold;
+    font-size: .453333rem;
+    color: #333;
+}
+
+.profile .profile_bg .title p {
+    font-size: .32rem;
+    color: #333;
+    margin-top: .133333rem;
+}
+
+.profile .profile_bg .content {
+    color: #333;
+    font-size: .32rem;
+    margin-top: .466667rem;
+}
+
+.culture {
+    width: 100%;
+    height: auto;
+    padding: 0 .32rem;
+    box-sizing: border-box;
+    margin-bottom: .8rem;
+}
+
+.culture .title, .technical .title, .recruit .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 2.4rem;
+    width: 100%;
+}
+
+.culture .title h3, .technical .title h3, .recruit .title h3 {
+    font-size: .453333rem;
+    color: #333;
+    font-weight: bold;
+    margin-top: .8rem;
+}
+
+.culture .title p, .technical .title p, .recruit .title p {
+    font-size: .32rem;
+    color: #333;
+    margin-top: .133333rem;
+}
+
+.culture .content {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.culture .content div {
+    float: left;
+}
+
+.culture .content>div {
+    width: 50%;
+    height: 4.32rem;
+    position: relative;
+}
+
+.culture .content>div.echnology {
+    background: url(../images/echnology.png) no-repeat center;
+    background-size: cover;
+}
+
+.culture .content>div.echnology p {
+    left: 2.666667rem;
+}
+
+.culture .content>div.rofessional {
+    background: url(../images/rofessional.png) no-repeat center;
+    background-size: cover;
+}
+
+.culture .content>div.rofessional p {
+    left: 2.4rem;
+}
+
+.culture .content>div.service1 {
+    background: url(../images/service.png) no-repeat center;
+    background-size: cover;
+}
+
+.culture .content>div.service1 p {
+    left: 3.133333rem;
+}
+
+.culture .content>div.concept {
+    background: url(../images/concept.png) no-repeat center;
+    background-size: cover;
+    width: 100%;
+}
+
+.culture .content>div.concept h6 {
+    top: 1.866667rem;
+    left: .866667rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+.culture .content>div.concept p {
+    left: .866667rem;
+    bottom: 1.6rem;
+    margin-top: .266667rem;
+}
+
+.culture .content>div.mission {
+    background: url(../images/mission.png) no-repeat center;
+    background-size: cover;
+}
+
+.culture .content>div.mission h6 {
+    width: 100%;
+    text-align: left;
+    top: 1.8rem;
+    left: .213333rem;
+    font-weight: bold;
+}
+
+.culture .content>div.mission p {
+    width: 100%;
+    text-align: left;
+    top: 2.4rem;
+    font-size: .293333rem;
+    color: #fff;
+    left: .213333rem;
+}
+
+.culture .content>div p {
+    color: #fff;
+    font-size: .293333rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 1.2rem;
+}
+
+.culture .content>div h6 {
+    color: #fff;
+    font-size: .346667rem;
+    text-align: center;
+    bottom: .4rem;
+    position: absolute;
+    width: 100%;
+}
+
+.technical {
+    width: 100%;
+    height: auto;
+    padding: 0 .32rem;
+    box-sizing: border-box;
+    background: #f5f5f5;
+    padding-bottom: 1rem;
+}
+
+.technical .title {
+    padding-bottom: .533333rem;
+}
+
+.technical .panel {
+    background: #fff;
+    margin-bottom: .6rem;
+}
+
+.technical .panel:last-child {
+    margin-bottom: 0;
+}
+
+.technical .panel img {
+    width: 100%;
+    height: 3.56rem;
+}
+
+.technical .panel .content {
+    padding: .333333rem;
+    box-sizing: border-box;
+}
+
+.technical .panel .content h5 {
+    font-size: .346667rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: .133333rem;
+}
+
+.technical .panel .content p {
+    font-size: .293333rem;
+    color: #333;
+}
+
+.recruit .content>div {
+    padding: 0 .32rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.recruit .content>div.header * {
+    width: calc(25% - .08rem);
+    text-align: center;
+    font-size: .346667rem;
+    float: left;
+}
+
+.recruit .content>div.message {
+    width: 100%;
+    height: 1.466667rem;
+    border-bottom: 1px solid #cccccc;
+    line-height: 1.466667rem;
+    font-size: .266667rem;
+}
+
+.recruit .content>div.message:last-child {
+    border-bottom: none;
+}
+
+.recruit .content>div.message * {
+    width: calc(25% - .08rem);
+    text-align: center;
+    float: left;
+}
+
+.recruit .content>div.message a {
+    width: 1.786667rem;
+    height: .613333rem;
+    background: #0073bc;
+    color: #fff;
+    border-radius: .133333rem;
+    margin-top: .426667rem;
+    line-height: .613333rem;
+    text-align: center;
+    margin-left: .4rem;
+}
+
+.recruit .content>div.header {
+    width: 100%;
+    height: 1.066667rem;
+    background: #eeeeee;
+    line-height: 1.066667rem;
+}
