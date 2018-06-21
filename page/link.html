@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/flexible_css.js"></script>
+    <script src="../js/flexible.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/link.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=IztG20Co7Yi3jnF5IInukAV2GhOMqU70"></script>
+</head>
+
+<body>
+    <!-- 导航logo -->
+    <header>
+        <div class="logo"></div>
+        <div class="menu"></div>
+    </header>
+    <div class="banner"></div>
+    <!-- 联系方式详情 -->
+    <div class="link_detail">
+        <h3>杭州银湖激光科技有限公司</h3>
+        <div class="box">
+            <div class="box1">
+                <span class="address"></span>
+                <p>地址:浙江省杭州市富阳区银湖街道富闲路9号银湖科创园</p>
+            </div>
+            <div class="box1">
+                <span class="tel"></span>
+                <p>电话:0571-63526916</p>
+            </div>
+            <div class="box1">
+                <span class="fax"></span>
+                <p>传真:0571-63526916</p>
+            </div>
+            <div class="box1">
+                <span class="email"></span>
+                <p>邮箱:xazhang@yinhulaser.com</p>
+            </div>
+            <div class="box1">
+                <span class="site"></span>
+                <p>网址:www.yinhulaser.com</p>
+            </div>
+            <div class="box1">
+                <span class="wechat"></span>
+                <p>微信公众号:杭州银湖激光科技有限公司（微信号:hzyhjg-）</p>
+            </div>
+        </div>
+    </div>
+    <!-- 地图 -->
+    <div id="allmap"></div>
+    <div class="footer">
+        <div class="navigate">
+            <a href="./about.html">
+                <div class="navigate1">
+                    <p>关于我们</p>
+                    <span class="arrow_right"></span>
+                </div>
+            </a>
+            <a href="javascript:;">
+                <div class="navigate1">
+                    <p>产品中心</p>
+                    <span class="arrow_right"></span>
+                </div>
+            </a>
+            <a href="javascript:;">
+                <div class="navigate1">
+                    <p>新闻咨询</p>
+                    <span class="arrow_right"></span>
+                </div>
+            </a>
+            <a href="./link.html">
+                <div class="navigate1">
+                    <p>联系我们</p>
+                    <span class="arrow_right"></span>
+                </div>
+            </a>
+        </div>
+        <div class="copyright">
+            <p>Copyright 2014-2018 杭州银湖激光科技有限公司</p>
+            <p>All rights reserved</p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var map = new BMap.Map('allmap');
+    var point = new BMap.Point(120.21551,30.253082);
+    map.centerAndZoom(point,12);
+    var myGeo = new BMap.Geocoder();
+    myGeo.getPoint("杭州市富阳区银湖科创园",function(point){
+        console.log(point);
+        if(point){
+            map.centerAndZoom(point,14);
+            map.addOverlay(new BMap.Marker(point));
+        }else{
+            console.log("您选择的地址没有解析到结果");
+        }
+    },"杭州市");
+</script>
+</html>

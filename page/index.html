@@ -137,25 +137,31 @@
     <div class="footer">
         <div class="advice">
             <div class="advice1">
-                <img src="../images/polygon.png" alt="">
-                <div class="advice_right">
-                    <p class="title">打样申请</p>
-                    <p class="content">提供免费打烊服务</p>
-                </div>
+                <a href="javascript:;">
+                    <img src="../images/polygon.png" alt="">
+                    <div class="advice_right">
+                        <p class="title">打样申请</p>
+                        <p class="content">提供免费打烊服务</p>
+                    </div>
+                </a>
             </div>
             <div class="advice1">
-                <img src="../images/polygon2.png" alt="">
-                <div class="advice_right">
-                    <p class="title">暖心建议</p>
-                    <p class="content">采纳每一份建议</p>
-                </div>
+                <a href="javascript:;">
+                    <img src="../images/polygon2.png" alt="">
+                    <div class="advice_right">
+                        <p class="title">暖心建议</p>
+                        <p class="content">采纳每一份建议</p>
+                    </div>
+                </a>
             </div>
             <div class="advice1">
-                <img src="../images/polygon3.png" alt="">
-                <div class="advice_right">
-                    <p class="title">咨询服务</p>
-                    <p class="content">提供24小时人工服务</p>
-                </div>
+                <a href="javascript:;">
+                    <img src="../images/polygon3.png" alt="">
+                    <div class="advice_right">
+                        <p class="title">咨询服务</p>
+                        <p class="content">提供24小时人工服务</p>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="navigate">
@@ -177,7 +183,7 @@
                     <span class="arrow_right"></span>
                 </div>
             </a>
-            <a href="javascript:;">
+            <a href="./link.html">
                 <div class="navigate1">
                     <p>联系我们</p>
                     <span class="arrow_right"></span>
@@ -189,6 +195,43 @@
             <p>All rights reserved</p>
         </div>
     </div>
+    <!-- 打样申请弹出框 -->
+    <div class="apply_popup">
+        <h3>打样申请</h3>
+        <span class="close"></span>
+        <form action="">
+            <div class="box">
+                <label for="name">联系人</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="box">
+                <label for="tel">联系电话</label>
+                <input type="text" id="tel" name="tel">
+            </div>
+            <div class="box">
+                <label for="company">公司名称</label>
+                <input type="text" id="company" name="company">
+            </div>
+            <div class="box">
+                <label for="address">公司地址</label>
+                <input type="text" id="address" name="address">
+            </div>
+            <div class="box">
+                <label for="quality">加工材质</label>
+                <input type="text" id="quality" name="quality">
+            </div>
+            <div class="box">
+                <label for="makings">材料厚度</label>
+                <input type="text" id="makings" name="makings">
+            </div>
+            <div class="box">
+                <label for="detail">详细需求</label>
+                <input type="text" id="detail" name="detail">
+            </div>
+            <button type="submit">提交</button>
+        </form>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
     <script>
         var swiper = new Swiper('.home', {
@@ -205,6 +248,14 @@
             pagination: {
                 el: ".swiper-pagination.product1",
             }
+        })
+        $(function(){
+            $('.advice1:first').click(function(){
+                $('.apply_popup').show();
+            })
+            $('.close').click(function(){
+                $('.apply_popup').hide();
+            })
         })
     </script>
 </body>

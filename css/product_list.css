@@ -1,0 +1,52 @@
+.page1 {
+    background: url(../images/bg2.png) no-repeat center;
+    background-size: cover;
+}
+
+.page1 .page1_content {
+    float: left;
+    margin-left: .32rem;
+    margin-right: 0;
+}
+
+.page1 .mashine {
+    width: 4rem;
+    height: 2.533333rem;
+    background: url(../images/device3.png) no-repeat center;
+    background-size: cover;
+    margin-left: 0;
+    margin-right: .32rem;
+    float: right;
+    margin-top: 4.533333rem;
+}
+
+.news_content a:first-child .news_content1>img {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.news_content a .news_content1>img {
+    margin-top: 1.066667rem;
+    margin-left: 0;
+}
+
+.news_content a .news_content1>.news_content1_text {
+    width: 6.4rem;
+    height: 2.533333rem;
+    margin-top: 1.066667rem;
+}
+
+.news_content a:nth-child(2) .news_content1>img {
+    width: 2.346667rem;
+    height: 1.92rem;
+}
+
+.news_content a:nth-child(3) .news_content1>img {
+    width: 2.906667rem;
+    height: 2.173333rem;
+}
+
+.news_content a:nth-child(4) .news_content1>img, .news_content a:nth-child(5) .news_content1>img {
+    width: 2.666667rem;
+    height: 2.453333rem;
+}
