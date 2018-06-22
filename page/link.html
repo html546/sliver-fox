@@ -51,7 +51,23 @@
         </div>
     </div>
     <!-- 地图 -->
-    <div id="allmap"></div>
+    <div id="map"></div>
+    <!-- 在线留言 -->
+    <div class="leave_message">
+        <h4 class="title">在线留言</h4>
+        <p>ONLINE MESSAGE</p>
+        <form action="" method="post">
+            <label for="name">姓名</label>
+            <input type="text" id="name" name="name1">
+            <label for="email">电子邮箱</label>
+            <input type="text" id="email" name="email">
+            <label for="tel">电话</label>
+            <input type="text" id="tel" name="tel">
+            <label for="advice">需求或建议</label>
+            <textarea name="advice" id="advice" resize="none"></textarea>
+            <button type="submit">提交</button>
+        </form>
+    </div>
     <div class="footer">
         <div class="navigate">
             <a href="./about.html">
@@ -86,18 +102,63 @@
     </div>
 </body>
 <script type="text/javascript">
-    var map = new BMap.Map('allmap');
-    var point = new BMap.Point(120.21551,30.253082);
-    map.centerAndZoom(point,12);
-    var myGeo = new BMap.Geocoder();
-    myGeo.getPoint("杭州市富阳区银湖科创园",function(point){
-        console.log(point);
-        if(point){
-            map.centerAndZoom(point,14);
-            map.addOverlay(new BMap.Marker(point));
-        }else{
-            console.log("您选择的地址没有解析到结果");
-        }
-    },"杭州市");
+    //创建和初始化地图函数：
+    function initMap() {
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        // addMapControl();//向地图添加控件
+        addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap() {
+        map = new BMap.Map("map");
+        map.centerAndZoom(new BMap.Point(119.989775, 30.138892), 15);
+    }
+    function setMapEvent() {
+        map.enableScrollWheelZoom();
+        map.enableKeyboard();
+        map.enableDragging();
+        map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target, window) {
+        target.addEventListener("click", function () {
+            target.openInfoWindow(window);
+        });
+    }
+    function addMapOverlay() {
+        var markers = [
+            { content: "我的备注", title: "银湖科创园", imageOffset: { width: 0, height: 3 }, position: { lat: 30.141453, lng: 119.986541 } }
+        ];
+        for (var index = 0; index < markers.length; index++) {
+            var point = new BMap.Point(markers[index].position.lng, markers[index].position.lat);
+            var marker = new BMap.Marker(point, {
+                icon: new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png", new BMap.Size(20, 25), {
+                    imageOffset: new BMap.Size(markers[index].imageOffset.width, markers[index].imageOffset.height)
+                })
+            });
+            var label = new BMap.Label(markers[index].title, { offset: new BMap.Size(25, 5) });
+            var opts = {
+                width: 200,
+                title: markers[index].title,
+                enableMessage: false
+            };
+            var infoWindow = new BMap.InfoWindow(markers[index].content, opts);
+            marker.setLabel(label);
+            addClickHandler(marker, infoWindow);
+            map.addOverlay(marker);
+        };
+    }
+    //向地图添加控件
+   /*  function addMapControl() {
+        var scaleControl = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+        scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+        map.addControl(scaleControl);
+        var navControl = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+        map.addControl(navControl);
+        var overviewControl = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: true });
+        map.addControl(overviewControl);
+    } */
+    var map;
+    initMap();
 </script>
+
 </html>

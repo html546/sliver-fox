@@ -518,3 +518,11 @@ header {
     width: .626667rem;
     height: .626667rem;
 }
+.banner{
+    width: 100%;
+    height: 9.6rem;
+    background: url(../images/banner8.png) no-repeat center;
+    background-size: cover;
+    margin-top: 1.2rem;
+    margin-bottom: 1.066667rem;
+}

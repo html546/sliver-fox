@@ -19,7 +19,7 @@
     width: 9.333333rem;
     height: 6.4rem;
     background: url(../images/device5.png) no-repeat center;
-    background-size: cover;
+    background-size: 6.866667rem 5.146667rem;
 }
 
 .page2 {
@@ -89,7 +89,16 @@
     position: relative;
 }
 
-.application1 .application1_imgs .img_show:first-child {
+.application1 .application1_imgs .img_show img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+/* .application1 .application1_imgs .img_show:first-child {
     background: url(../images/glass.png) no-repeat center;
     background-size: cover;
 }
@@ -107,7 +116,7 @@
 .application1 .application1_imgs .img_show:nth-child(4) {
     background: url(../images/glass4.png) no-repeat center;
     background-size: cover;
-}
+} */
 
 .application1 .application1_imgs .img_show:nth-child(even) {
     margin-left: .8rem;
@@ -124,4 +133,18 @@
     color: #fff;
     font-size: .293333rem;
     background: rgba(0, 0, 0, .7);
+    z-index: 100;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: .2rem;
+    height: .266667rem;
+    margin-top: -.133333rem;
+    z-index: 10;
+    cursor: pointer;
+    background-size: .2rem .266667rem;
+    background-position: center;
+    background-repeat: no-repeat;
 }
