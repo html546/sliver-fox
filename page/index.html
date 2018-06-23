@@ -249,14 +249,34 @@
                 el: ".swiper-pagination.product1",
             }
         })
-        $(function(){
-            $('.advice1:first').click(function(){
+        $(function () {
+            $('.advice1:first').click(function () {
                 $('.apply_popup').show();
             })
-            $('.close').click(function(){
+            $('.close').click(function () {
                 $('.apply_popup').hide();
             })
         })
+        var is_show = false;
+        $('.menu').click(function () {
+            // $('.navigate').toggle();
+            is_show = !is_show;
+            if (is_show) {
+                $('.navigate').css('right', 0);
+            } else {
+                $('.navigate').css('right', '-50%');
+                // is_show = !is_show;
+            }
+        })
+        if (/Android [4-6]/.test(navigator.appVersion)) {
+            window.addEventListener('resize', function () {
+                if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
+                    window.setTimeout(function () {
+                        document.activeElement.scrollIntoViewIfNeeded()
+                    }, 0)
+                }
+            })
+        }
     </script>
 </body>
 
